@@ -2,7 +2,10 @@
 
 int main()
 {
+  cStr temp("Hello"),temp2(" world");
 
-  cout << "hello" << endl;
+  cout << temp+" world" << endl;
+  cout << temp+temp2 << endl;
+
   return(0);
 }

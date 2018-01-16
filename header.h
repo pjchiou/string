@@ -10,12 +10,20 @@ class cStr
 {
 private:
   int iLength;
-  char *s;
+  char *buff;
 public:
   cStr();
-  cStr(char *s);
+  cStr(const char *s);
   cStr(const cStr& s);
   ~cStr();
+  int Length(){return(iLength);}
+  char& operator[](int i){ return(buff[i]); }
+  friend ostream& operator <<(ostream& os,const cStr& s);
+  void operator=(const char *s);
+  void operator=(const cStr& s);
+  cStr operator +(const char *s);
+  cStr operator +(const cStr& s);
+  friend cStr operator +(const char *s,const cStr& s2);
 };
 
 #endif
