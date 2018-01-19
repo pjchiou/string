@@ -10,7 +10,7 @@ cStr::cStr()
 
 cStr::cStr(const char *s)
 {
-  cout << "[" << this << "] call constructor";
+  cout << "[" << this << "] call const char*s constructor";
 
   int i=0;
   iLength=0;
@@ -26,7 +26,7 @@ cStr::cStr(const char *s)
 
 cStr::cStr(const cStr& s)
 {
-  cout << "[" << this << "] call constructor";
+  cout << "[" << this << "] call const cStr& constructor";
 
   int i=0;
   iLength=0;

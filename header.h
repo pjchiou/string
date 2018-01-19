@@ -14,7 +14,7 @@ private:
 public:
   cStr();
   cStr(const char *s);
-  cStr(const cStr& s);
+  cStr(const cStr& s);  
   ~cStr();
   int Length(){return(iLength);}
   char& operator[](int i){ return(buff[i]); }
