@@ -117,3 +117,20 @@ cStr cStr::operator+(const cStr& s)
 
   return(temp);
 }
+
+cStr operator+(const char *s,const cStr& s2)
+{
+  int len=0;
+  cStr temp;
+
+  while( s && s[++len]!='\0' );
+  temp.buff = new char[len+s2.iLength+1];
+
+  for(int i=0;i<len;i++)
+    temp.buff[i] = s[i];
+  for(int i=0;i<s2.iLength;i++)
+    temp.buff[len+i] = s2.buff[i];
+  temp.buff[len+s2.iLength]='\0';
+
+  return(temp);
+}
